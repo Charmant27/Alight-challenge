@@ -43,7 +43,7 @@ const Login = () => {
                             </div>
                             <div className="w-1 h-[40px] bg-secondary-100"></div>
                             <div>
-                                <Link href='/'
+                                <Link href='/signup'
                                     className="font-light text-primary-500 text-xl"
                                 >
                                     Signup
