@@ -15,13 +15,14 @@ const config: Config = {
       },
       colors: {
         primary: {
+          100: '#E5EDF9',
           200: '#91BDF5',
           500: '#4B93E7'
         },
 
         gray: {
           100: '#DCE5F2',
-          200: '#F1F4F9'
+          200: '#F1F4F9',
         },
 
         secondary: {
