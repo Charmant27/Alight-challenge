@@ -17,12 +17,15 @@ const config: Config = {
         primary: {
           100: '#E5EDF9',
           200: '#91BDF5',
+          300: '#F3F8FF',
           500: '#4B93E7'
         },
 
         gray: {
           100: '#DCE5F2',
           200: '#F1F4F9',
+          300: '#CFD8DC',
+          400: '#6479AB30',
         },
 
         secondary: {
