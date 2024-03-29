@@ -17,3 +17,7 @@ body {
 .login-section {
     @apply bg-gradient-to-r from-gray-100 to-gray-200
 }
+
+.radius {
+  border-radius: 50%;
+}
