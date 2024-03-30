@@ -18,7 +18,7 @@ const Sidebar = () => {
                     </div>
                     {/* links */}
                     <div className="flex flex-col gap-6">
-                        <Link href='/' className="flex flex-col justify-center gap-1 text-secondary-300">
+                        <Link href='/dashboard' className="flex flex-col justify-center gap-1 text-secondary-300">
                             <span className="text-xl">
                                 <FaHome />
                             </span>
