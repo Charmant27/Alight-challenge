@@ -54,3 +54,159 @@ export const data = [
     offered: 1,
   },
 ]
+
+export const recentEvents = [
+  {
+    id: 1,
+    time: '3:15',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 2,
+    time: '10:00',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 3,
+    time: '10:00',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 4,
+    time: '10:00',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: true
+  },
+]
+
+export const nextEvents = [
+  {
+    id: 1,
+    time: '3:15',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 2,
+    time: '10:00',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: true
+  },
+
+  {
+    id: 3,
+    time: '10:00',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 4,
+    time: '10:00',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+]
+
+export const pastWeekEvents = [
+  {
+    id: 1,
+    time: 'Sep 3',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 2,
+    time: 'Sep 3',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: true
+  },
+
+  {
+    id: 3,
+    time: 'Sep 3',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 4,
+    time: 'Sep 6',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 5,
+    time: 'Sep 8',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: false
+  },
+
+  {
+    id: 6,
+    time: 'Sep 9',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: true
+  },
+
+  {
+    id: 7,
+    time: 'Sep 9',
+    candidate_name: 'Mini Soman',
+    position: 'Mean stack developer; 4th phase interview',
+    start_time: '3:15',
+    end_time: '3:45',
+    completed: true
+  },
+]
