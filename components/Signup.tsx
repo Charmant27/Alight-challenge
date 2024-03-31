@@ -19,8 +19,8 @@ const Signup = () => {
             </div>
             <h1 className="text-secondary-500 font-semibold">HR Management</h1>
         </div>
-        <div className="flex gap-10">
-            <div className="col">
+        <div className="flex flex-col md:flex-row gap-10">
+            <div className="col hidden md:block">
                 <Image
                     src='/assets/login-illustrator.svg'
                     width={250}

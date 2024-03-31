@@ -8,7 +8,7 @@ const Login = () => {
             <div
                 className="bg-secondary-300 my-10 drop-shadow-2xl px-12 py-24 rounded-[8px] flex flex-col gap-14"
             >
-                <div className="flex gap-3 justify-center">
+                <div className="flex gap-3 justify-center flex-col md:flex-row">
                     <div>
                         <Image
                             src='/assets/logo.svg'
@@ -20,7 +20,7 @@ const Login = () => {
                     <h1 className="text-secondary-500 font-semibold">HR Management</h1>
                 </div>
                 <div className="flex gap-10">
-                    <div className="col">
+                    <div className="col hidden md:block">
                         <Image
                             src='/assets/login-illustrator.svg'
                             width={250}
@@ -28,7 +28,7 @@ const Login = () => {
                             alt="login"
                         />
                     </div>
-                    <div className="w-1 h-[300px] bg-secondary-100"></div>
+                    <div className="w-1 h-[300px] hidden md:block bg-secondary-100"></div>
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-6">
                             <div>
@@ -74,7 +74,7 @@ const Login = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className="flex justify-between">
+                                <div className="flex flex-col md:flex-col justify-between">
                                     <div className="flex gap-1">
                                         <input
                                             type="radio"
