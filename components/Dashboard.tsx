@@ -2,7 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import Nav from "./Nav"
 import Sidebar from "./Sidebar"
-import { data } from "@/constants"
+import { data, recentEvents, nextEvents, pastWeekEvents } from "@/constants"
+import { FaPlus } from "react-icons/fa";
 
 const Dashboard = () => {
     return (
@@ -171,43 +172,119 @@ const Dashboard = () => {
                                     <button className="text-slate-400">Onboardings</button>
                                 </div>
                                 <table className="bg-primary-300 rounded-lg">
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th>Positions left</th>
-                                                <th>Applications</th>
-                                                <th className="hidden-col">Interviewed</th>
-                                                <th className="hidden-col">Rejected</th>
-                                                <th className="hidden-col">Feedback pending</th>
-                                                <th className="hidden-col">Offered</th>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th>Positions left</th>
+                                            <th>Applications</th>
+                                            <th className="hidden-col">Interviewed</th>
+                                            <th className="hidden-col">Rejected</th>
+                                            <th className="hidden-col">Feedback pending</th>
+                                            <th className="hidden-col">Offered</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {data.map((item) => (
+                                            <tr key={item.id}>
+                                                <td>
+                                                    <Image
+                                                        src='/assets/table-icon.svg'
+                                                        width={40}
+                                                        height={40}
+                                                        alt="icon"
+                                                    />
+                                                </td>
+                                                <td className="font-semibold text-secondary-200">{item.position}</td>
+                                                <td className="font-semibold text-secondary-200">{item.positions_left}</td>
+                                                <td>{item.applications}</td>
+                                                <td className="hidden-col">{item.interviewed}</td>
+                                                <td className="hidden-col">{item.rejected}</td>
+                                                <td className="hidden-col">{item.feedback_pending}</td>
+                                                <td className="hidden-col">{item.offered}</td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            {data.map((item) => (
-                                                <tr key={item.id}>
-                                                    <td>
-                                                        <Image
-                                                            src='/assets/table-icon.svg'
-                                                            width={40}
-                                                            height={40}
-                                                            alt="icon"
-                                                        />
-                                                    </td>
-                                                    <td className="font-semibold text-secondary-200">{item.position}</td>
-                                                    <td className="font-semibold text-secondary-200">{item.positions_left}</td>
-                                                    <td>{item.applications}</td>
-                                                    <td className="hidden-col">{item.interviewed}</td>
-                                                    <td className="hidden-col">{item.rejected}</td>
-                                                    <td className="hidden-col">{item.feedback_pending}</td>
-                                                    <td className="hidden-col">{item.offered}</td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
+                                        ))}
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <div className="w-[25%]"></div>
+                        <div
+                            className="w-full md:w-[25%] h-screen flex flex-col gap-3 overflow-y-auto bg-primary-300 rounded-lg px-3 py-6"
+                        >
+                            <div className="flex gap-3 items-center font-semibold">
+                                <div className="text-secondary-200">
+                                    <h2>Upcoming Meetings</h2>
+                                </div>
+                                <div
+                                    className="text-primary-500 border border-primary-500 rounded-full py-1 px-1"
+                                >
+                                    <FaPlus />
+                                </div>
+                            </div>
+                            {/* first */}
+                            <div className="flex flex-col gap-2">
+                                <h4 className="font-semibold text-slate-400 text-xs">Today</h4>
+                                {recentEvents.map((event) => (
+                                    <div
+                                        key={event.id}
+                                        className={`${event.completed ? 'bg-green-100 border-r-8 border-r-green-200' : 'bg-blue-100 border-r-8 border-r-blue-300'} flex gap-2 items-center text-xs px-2 py-3 rounded-lg`}
+                                    >
+                                        <div className={`${event.completed ? 'text-green-300' : 'text-blue-200'} font-semibold`}>
+                                            <p>{event.time}</p>
+                                        </div>
+                                        <div className={`${event.completed ? 'text-green-300' : 'text-blue-200'}`}>
+                                            <p>
+                                                <span className="font-semibold">{event.candidate_name} </span>
+                                                {event.position} |
+                                                <span className="font-semibold"> {event.start_time} - {event.end_time}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            {/* second */}
+                            <div className="flex flex-col gap-2">
+                                <h4 className="font-semibold text-slate-400 text-xs">Tomorrow</h4>
+                                {nextEvents.map((event) => (
+                                    <div
+                                        key={event.id}
+                                        className={`${event.completed ? 'bg-green-100 border-r-8 border-r-green-200' : 'bg-blue-100 border-r-8 border-r-blue-300'} flex gap-2 items-center text-xs px-2 py-3 rounded-lg`}
+                                    >
+                                        <div className={`${event.completed ? 'text-green-300' : 'text-blue-200'} font-semibold`}>
+                                            <p>{event.time}</p>
+                                        </div>
+                                        <div className={`${event.completed ? 'text-green-300' : 'text-blue-200'}`}>
+                                            <p>
+                                                <span className="font-semibold">{event.candidate_name} </span>
+                                                {event.position} |
+                                                <span className="font-semibold"> {event.start_time} - {event.end_time}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            {/* third */}
+                            <div className="flex flex-col gap-2">
+                                <h4 className="font-semibold text-slate-400 text-xs">This week</h4>
+                                {pastWeekEvents.map((event) => (
+                                    <div
+                                        key={event.id}
+                                        className={`${event.completed ? 'bg-green-100 border-r-8 border-r-green-200' : 'bg-blue-100 border-r-8 border-r-blue-300'} flex gap-2 items-center text-xs px-2 py-3 rounded-lg`}
+                                    >
+                                        <div className={`${event.completed ? 'text-green-300' : 'text-blue-200'} font-semibold`}>
+                                            <p>{event.time}</p>
+                                        </div>
+                                        <div className={`${event.completed ? 'text-green-300' : 'text-blue-200'}`}>
+                                            <p>
+                                                <span className="font-semibold">{event.candidate_name} </span>
+                                                {event.position} |
+                                                <span className="font-semibold"> {event.start_time} - {event.end_time}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
