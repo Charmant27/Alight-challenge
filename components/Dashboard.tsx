@@ -1,11 +1,11 @@
 import Image from "next/image"
-import Link from "next/link"
 import Nav from "./Nav"
 import Sidebar from "./Sidebar"
 import { data, recentEvents, nextEvents, pastWeekEvents } from "@/constants"
 import { FaPlus } from "react-icons/fa";
 
 const Dashboard = () => {
+
     return (
         <section className="h-screen">
             <div className="flex md:flex-col lg:flex-row">
