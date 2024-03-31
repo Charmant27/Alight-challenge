@@ -27,9 +27,19 @@ th {
 }
 
 td {
-  @apply border-b border-primary-100
+  @apply border-b border-primary-100 text-slate-400
 }
 
 th, td {
-  @apply py-3 text-center font-light text-base px-1
+  @apply py-3 px-2 text-center font-light text-base
+}
+
+@media screen and (max-width: 768px) {
+  .hidden-col {
+    display: none;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
 }
