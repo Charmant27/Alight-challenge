@@ -15,10 +15,10 @@ npm run dev
 
 
 ## NAVIGATION
-http://localhost:3000: it immediately takes users to the login page just incase they are not authenticated.
+https://alight-challenge.vercel.app/: it immediately takes users to the login page just incase they are not authenticated.
 
-http://localhost:3000/signup. it takes users to the signup form page.
+https://alight-challenge.vercel.app/signup. it takes users to the signup form page.
 
-http://localhost:3000/dashboard. it takes users to the dashboard layout.
+https://alight-challenge.vercel.app/dashboard. it takes users to the dashboard layout.
 
-http://localhost:3000/candidate-profile. it takes users to a candidates page.
+https://alight-challenge.vercel.app/candidate-profile. it takes users to a candidates page.
