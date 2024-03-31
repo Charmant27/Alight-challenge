@@ -14,7 +14,7 @@ const Dashboard = () => {
                 <div className="md:w-full md:pl-36">
                     <Nav />
                     <div className="flex flex-col gap-3 md:flex-row px-2 py-5 md:px-10">
-                        <div className="w-full md:w-[80%] flex flex-col gap-12">
+                        <div className="w-full md:w-[75%] flex flex-col gap-12">
                             <div className="flex gap-3 flex-col md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h2>Overview</h2>
@@ -170,18 +170,17 @@ const Dashboard = () => {
                                     <button className="text-slate-400">Candidates</button>
                                     <button className="text-slate-400">Onboardings</button>
                                 </div>
-                                <div className="bg-white w-full md:overflow-x-hidden rounded-lg flex flex-col gap-4 px-5 py-2">
-                                    <table>
+                                <table className="bg-primary-300 rounded-lg">
                                         <thead>
                                             <tr>
                                                 <th></th>
                                                 <th></th>
                                                 <th>Positions left</th>
                                                 <th>Applications</th>
-                                                <th className="hidden">Interviewed</th>
-                                                <th className="hidden">Rejected</th>
-                                                <th className="hidden">Feedback pending</th>
-                                                <th className="hidden">Offered</th>
+                                                <th className="hidden-col">Interviewed</th>
+                                                <th className="hidden-col">Rejected</th>
+                                                <th className="hidden-col">Feedback pending</th>
+                                                <th className="hidden-col">Offered</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -195,21 +194,20 @@ const Dashboard = () => {
                                                             alt="icon"
                                                         />
                                                     </td>
-                                                    <td>{item.position}</td>
-                                                    <td>{item.positions_left}</td>
+                                                    <td className="font-semibold text-secondary-200">{item.position}</td>
+                                                    <td className="font-semibold text-secondary-200">{item.positions_left}</td>
                                                     <td>{item.applications}</td>
-                                                    <td className="hidden">{item.interviewed}</td>
-                                                    <td className="hidden">{item.rejected}</td>
-                                                    <td className="hidden">{item.feedback_pending}</td>
-                                                    <td className="hidden">{item.offered}</td>
+                                                    <td className="hidden-col">{item.interviewed}</td>
+                                                    <td className="hidden-col">{item.rejected}</td>
+                                                    <td className="hidden-col">{item.feedback_pending}</td>
+                                                    <td className="hidden-col">{item.offered}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
                                     </table>
-                                </div>
                             </div>
                         </div>
-                        <div className="w-[20%]"></div>
+                        <div className="w-[25%]"></div>
                     </div>
                 </div>
             </div>
